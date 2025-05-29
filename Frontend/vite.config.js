@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://payment-app-womr.onrender.com',
+        target: 'http://localhost:7000',
         changeOrigin: true,
         secure: false   
       }
