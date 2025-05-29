@@ -29,7 +29,7 @@ export const paymentVerification = async (req, res) => {
   const isAuthentic = expectedSignature === razorpay_signature;
   if (isAuthentic) {
     return res.redirect(
-      `http://localhost:5173/paymentsucess?reference=${razorpay_payment_id}`
+      `https://payment-app-eight-gamma.vercel.app/paymentsucess?reference=${razorpay_payment_id}`
     );
   } else {
     res.status(404).json({
