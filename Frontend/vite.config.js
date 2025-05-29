@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:7000',
+        target: 'https://payment-app-kkpc.onrender.com',
         changeOrigin: true,
         secure: false   
       }
