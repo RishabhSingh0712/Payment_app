@@ -4,7 +4,7 @@ import '../style/Products.css'
 
 function Products({ products }) {
     const checkoutHandler = async (amount) => {
-        const {data:keyData} = await axios.get("api/v1/getKey")
+        const {data:keyData} = await axios.get("/api/v1/getKey")
         const {key} = keyData
         const {data:orderData} = await axios.post("/api/v1/paymentprocess",{
             amount: amount
