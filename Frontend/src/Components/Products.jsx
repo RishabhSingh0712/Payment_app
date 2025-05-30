@@ -18,7 +18,7 @@ function Products({ products }) {
         name: 'RS7 Store',
         description: 'Razorpay integration',
         order_id: order.id,
-        callback_url: 'https://payment-app-eight-gamma.vercel.app/api/v1/paymentVerification', 
+        callback_url: 'https://payment-app-kkpc.onrender.com/api/v1/paymentVerification', 
         prefill: {
           name: 'Rishabh Singh',
           email: 'rishabh@example.com',
