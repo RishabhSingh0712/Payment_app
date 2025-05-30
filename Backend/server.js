@@ -1,10 +1,10 @@
 import app from "./app.js";
 import dotenv from "dotenv";
 import Razorpay from "razorpay";
-import cors from "cors";
+
 
 dotenv.config();
-app.use(cors());
+
 
 //Razorpay configuration
  export const razorpay = new Razorpay({
