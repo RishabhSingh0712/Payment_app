@@ -15,14 +15,14 @@ function Products({ products }) {
         key: key, 
         amount: amount,
         currency: 'INR',
-        name: 'RS7 Store',
+        name: 'Rishabh Singh',
         description: 'Razorpay integration',
         order_id: order.id,
         callback_url: 'https://payment-app-kkpc.onrender.com/api/v1/paymentVerification', 
         prefill: {
           name: 'Rishabh Singh',
           email: 'rishabh@example.com',
-          contact: '9999999999'
+          contact: '9876543210',
         },
         theme: {
           color: '#F37255'
