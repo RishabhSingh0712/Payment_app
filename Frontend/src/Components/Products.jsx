@@ -4,10 +4,10 @@ import '../style/Products.css'
 
 function Products({ products }) {
     const checkoutHandler = async (amount) => {
-      const API = process.env.BACKEND_URL
-        const {data:keyData} = await axios.get(`${API}/api/v1/getKey`)
+      
+        const {data:keyData} = await axios.get("https://payment-app-kkpc.onrender.com/api/v1/getKey")
         const {key} = keyData
-        const {data:orderData} = await axios.post(`${API}/api/v1/paymentprocess`,{
+        const {data:orderData} = await axios.post("https://payment-app-kkpc.onrender.com/api/v1/paymentprocess",{
             amount: amount
         })
         const {order} = orderData       
@@ -18,7 +18,7 @@ function Products({ products }) {
         name: 'RS7 Store',
         description: 'Razorpay integration',
         order_id: order.id,
-        callback_url: '/api/v1/paymentVerification', 
+        callback_url: 'https://payment-app-kkpc.onrender.com/api/v1/paymentVerification', 
         prefill: {
           name: 'Rishabh Singh',
           email: 'rishabh@example.com',
