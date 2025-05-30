@@ -4,9 +4,10 @@ import '../style/Products.css'
 
 function Products({ products }) {
     const checkoutHandler = async (amount) => {
-        const {data:keyData} = await axios.get("https://payment-app-kkpc.onrender.com/api/v1/getKey")
+      const API = process.env.BACKEND_URL
+        const {data:keyData} = await axios.get(`${API}/api/v1/getKey`)
         const {key} = keyData
-        const {data:orderData} = await axios.post("https://payment-app-kkpc.onrender.com/api/v1/paymentprocess",{
+        const {data:orderData} = await axios.post(`${API}/api/v1/paymentprocess`,{
             amount: amount
         })
         const {order} = orderData       
